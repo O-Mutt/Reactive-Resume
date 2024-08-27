@@ -54,6 +54,8 @@ services:
       - postgres
       - minio
       - chrome
+    env_file:
+      ./env
     environment:
       # -- Environment Variables --
       PORT: 3000
@@ -75,7 +77,7 @@ services:
       REFRESH_TOKEN_SECRET: refresh_token_secret
 
       # -- Emails --
-      MAIL_FROM: noreply@localhost
+      MAIL_FROM: O'Resume <noreply@okeefe.dev>
       # SMTP_URL: smtp://user:pass@smtp:587 # Optional
 
       # -- Storage (Minio) --
