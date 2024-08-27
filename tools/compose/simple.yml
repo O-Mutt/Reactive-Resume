@@ -10,7 +10,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     env_file:
-      ./env
+      ./.env
     environment:
       POSTGRES_DB: postgres
       POSTGRES_USER: postgres
@@ -55,7 +55,7 @@ services:
       - minio
       - chrome
     env_file:
-      ./env
+      ./.env
     environment:
       # -- Environment Variables --
       PORT: 3000
